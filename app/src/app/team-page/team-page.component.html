@@ -1,0 +1,23 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let player of players">
+    <mat-card>
+      <img style="float:left; margin-right: 1rem" mat-card-sm-image [src]="player.thumbnail">
+      <div style="float:left;">
+        <div class="form-group">
+          <label>{{player.name}}</label>
+        </div>
+        <div class="form-group">
+          <label>{{player.position}}</label>
+        </div>
+        <div class="form-group">
+          <label [id]="'birthdate_' + player._id">birthDate: </label>
+          <label [for]="'birthdate_' + player._id">{{ player.born | date: 'yyyy/dd/MM' }}</label>
+        </div>
+        <div class="form-group">
+          <label [id]="'price_' + player._id">price: </label>
+          <label [for]="'price_' + player._id"> {{player.signin.amount | currency: (player.signin.currency | uppercase) : 'symbol': '2.2-2': 'fr' }} </label>
+        </div>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

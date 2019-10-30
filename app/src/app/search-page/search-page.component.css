@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+
+.searchbar {
+  display:flex;
+  margin: 1rem auto auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

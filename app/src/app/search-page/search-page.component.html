@@ -1,0 +1,11 @@
+  <div class="header">
+    <input class="searchbar" type="search" matInput placeholder="League" [ngModel]="leagueName" (ngModelChange)="searchLeague($event)"/>
+  </div>
+
+  <mat-grid-list class="list" cols="2" rowHeight="2:1" gutterSize="5px" style="display: flex">
+    <mat-grid-tile class="tile" style="max-width: 200px" *ngFor="let team of teams">
+      <a [href]="'/team/' + team.name">
+        <img style="max-width: 200px" [src]="team.thumbnail"/>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
